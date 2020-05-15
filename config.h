@@ -64,7 +64,7 @@ static const char *termcmd[]       = { "alacritty", NULL };
 // static const char *termcmd[]       = { "alacritty", "-e", "tmux" };
 static const char *emojicmd[]      = { "emoji_menu.sh", NULL };
 static const char *screenshotcmd[] = { "screenshot.sh", NULL };
-static const char *browsercmd[]    = { "chromium-browser", NULL };
+static const char *browsercmd[]    = { "browser.sh", NULL };
 static const char *passwordcmd[]   = { "keepass2", NULL };
 static const char *hibernatecmd[]  = { "sudo", "systemctl", "hibernate" };
 
