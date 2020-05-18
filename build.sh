@@ -2,6 +2,7 @@
 set -ex
 
 git checkout master
+git branch | grep -Fw tmp && git branch -D tmp
 git checkout -b tmp
 git merge --no-edit config
 git merge --no-edit build
