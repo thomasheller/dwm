@@ -32,6 +32,7 @@ static const Rule rules[] = {
 	{ "Signal",   NULL,       NULL,       1 << (5-1),   0,           -1 },
 	{ "Shutter",  NULL,       NULL,       1 << (9-1),   0,           -1 },
 	// { "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "KeePass",  NULL,       NULL,       NULL,         1,           -1 },
 };
 
 /* layout(s) */
