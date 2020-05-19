@@ -68,6 +68,7 @@ static const char *screenshotcmd[] = { "screenshot.sh", NULL };
 static const char *browsercmd[]    = { "run_alternatives.sh", "chromium", "chromium-browser" };
 static const char *passwordcmd[]   = { "keepass2", NULL };
 static const char *hibernatecmd[]  = { "sudo", "systemctl", "hibernate" };
+static const char *mixercmd[]      = { "gnome-alsamixer", NULL };
 
 #include "movestack.c"
 static Key keys[] = {
@@ -92,6 +93,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = mixercmd } },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
