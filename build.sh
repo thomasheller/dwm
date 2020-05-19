@@ -1,6 +1,7 @@
 #!/bin/bash
 set -ex
 
+git branch | grep -Fw config || git fetch origin config
 git checkout master
 git branch | grep -Fw tmp && git branch -D tmp
 git checkout -b tmp
