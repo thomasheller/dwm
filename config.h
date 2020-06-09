@@ -3,6 +3,7 @@
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
+static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10" };
@@ -27,12 +28,13 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       1 << (8-1),   1,           -1 },
-	{ "Signal",   NULL,       NULL,       1 << (5-1),   0,           -1 },
-	{ "Shutter",  NULL,       NULL,       1 << (9-1),   0,           -1 },
-	// { "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "KeePass",  NULL,       NULL,       NULL,         1,           -1 },
+	/* class       instance    title       tags mask     isfloating   isterminal   noswallow   monitor */
+	{ "Alacritty", NULL,       NULL,       0,            0,           1,           0,          -1 },
+	{ "Gimp",      NULL,       NULL,       1 << (8-1),   1,           0,           0,          -1 },
+	{ "Signal",    NULL,       NULL,       1 << (5-1),   0,           0,           0,          -1 },
+	{ "Shutter",   NULL,       NULL,       1 << (9-1),   0,           0,           0,          -1 },
+	// { "Firefox",   NULL,       NULL,       1 << 8,       0,           0,           0,          -1 },
+	{ "KeePass",   NULL,       NULL,       NULL,         1,           0,           0,          -1 },
 };
 
 /* layout(s) */
