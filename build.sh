@@ -12,6 +12,7 @@ patch <dwm-warp-6.2.diff
 # patch <dwm-zoomswap-6.2.diff
 patch <dwm-remove-iscol-fix.diff
 patch <dwm-movestack-6.1.diff
+patch <dwm-swallow-20200522-7accbcf.diff
 make
 git checkout build
 git branch -D tmp
