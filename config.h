@@ -74,9 +74,6 @@ static const char *hibernatecmd[]  = { "sudo", "systemctl", "hibernate" };
 static const char *mixercmd[]      = { "gnome-alsamixer", NULL };
 static const char *lockcmd[]       = { "xsecurelock", NULL };
 static const char *cheatsheetcmd[] = { "cheatsheet" };
-static const char *audiomutecmd[]  = { "pamixer", "-t" };
-static const char *audioraisecmd[] = { "pamixer", "-i", "15" };
-static const char *audiolowercmd[] = { "pamixer", "-d", "15" };
 
 #include <X11/XF86keysym.h>
 #include "movestack.c"
@@ -126,9 +123,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Print,                spawn,          {.v = screenshotcmd } },
 	{ MODKEY|ShiftMask,             XK_Pause,                spawn,          {.v = hibernatecmd } },
 	{ MODKEY,                       XK_F1,                   spawn,          {.v = cheatsheetcmd } },
-	{ 0,                            XF86XK_AudioMute,        spawn,          {.v = audiomutecmd } },
-	{ 0,                            XF86XK_AudioRaiseVolume, spawn,          {.v = audioraisecmd } },
-	{ 0,                            XF86XK_AudioLowerVolume, spawn,          {.v = audiolowercmd } },
+	{ 0,                            XF86XK_AudioMute,        spawn,          SHCMD("pamixer -t && echo volume >> $HOME/go/src/github.com/thomasheller/godwmbar/godwmbar.pipe" ) },
+	{ 0,                            XF86XK_AudioRaiseVolume, spawn,          SHCMD("pamixer -i 15 && echo volume >> $HOME/go/src/github.com/thomasheller/godwmbar/godwmbar.pipe" ) },
+	{ 0,                            XF86XK_AudioLowerVolume, spawn,          SHCMD("pamixer -d 15 && echo volume >> $HOME/go/src/github.com/thomasheller/godwmbar/godwmbar.pipe" ) },
 };
 
 /* button definitions */
