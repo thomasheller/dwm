@@ -77,6 +77,9 @@ static const char *mixercmd[]      = { "gnome-alsamixer", NULL };
 static const char *lockcmd[]       = { "xsecurelock", NULL };
 static const char *cheatsheetcmd[] = { "cheatsheet" };
 
+static const char scratchpadname[] = "scratchpad";
+static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x24", NULL };
+
 #include <X11/XF86keysym.h>
 #include "movestack.c"
 static Key keys[] = {
@@ -120,6 +123,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                                    6)
 	TAGKEYS(                        XK_8,                                    7)
 	TAGKEYS(                        XK_9,                                    8)
+	{ MODKEY,                       XK_x,                    togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY|ShiftMask,             XK_q,                    quit,           {0} }, // quit
 	{ MODKEY|ShiftMask,             XK_r,                    quit,           {1} }, // restart
 	{ MODKEY,                       XK_Print,                spawn,          {.v = screenshotcmd } },
