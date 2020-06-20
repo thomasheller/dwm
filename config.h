@@ -77,6 +77,7 @@ static const char *hibernatecmd[]  = { "sudo", "systemctl", "hibernate" };
 static const char *mixercmd[]      = { "gnome-alsamixer", NULL };
 static const char *lockcmd[]       = { "xsecurelock", NULL };
 static const char *cheatsheetcmd[] = { "cheatsheet" };
+static const char *googlecmd[]     = { "google_search.py" };
 
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x24", NULL };
@@ -100,6 +101,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_l,                    spawn,          {.v = lockcmd } },
 	{ MODKEY|ShiftMask,             XK_j,                    movestack,      {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,                    movestack,      {.i = -1 } },
+	{ MODKEY,                       XK_g,                    spawn,          {.v = googlecmd } },
 	{ MODKEY,                       XK_Return,               zoom,           {0} },
 	{ MODKEY,                       XK_Tab,                  view,           {0} },
 	// { MODKEY|ShiftMask,             XK_c,                    killclient,     {0} },
