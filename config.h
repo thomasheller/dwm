@@ -68,6 +68,7 @@ static const char *dmenucmd[]      = { "dmenu_run", "-m", dmenumon, "-fn", dmenu
 static const char *termcmd[]       = { "st", NULL };
 // static const char *termcmd[]       = { "alacritty", NULL };
 // static const char *termcmd[]       = { "alacritty", "-e", "tmux" };
+static const char *xkillcmd[]      = { "xkill" };
 static const char *emojicmd[]      = { "emoji_menu.sh", NULL };
 static const char *screenshotcmd[] = { "screenshot.sh", NULL };
 static const char *browsercmd[]    = { "run_alternatives.sh", "chromium", "chromium-browser", "google-chrome" };
@@ -102,6 +103,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Return,               zoom,           {0} },
 	{ MODKEY,                       XK_Tab,                  view,           {0} },
 	// { MODKEY|ShiftMask,             XK_c,                    killclient,     {0} },
+	{ MODKEY|ShiftMask,             XK_c,                    spawn,          {.v = xkillcmd } },
 	{ MODKEY,                       XK_t,                    setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,                    setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,                    setlayout,      {.v = &layouts[2]} },
