@@ -129,10 +129,10 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                                    7)
 	TAGKEYS(                        XK_9,                                    8)
 	{ MODKEY,                       XK_x,                    togglescratch,  {.v = scratchpadcmd } },
-	{ MODKEY|ShiftMask,             XK_q,                    quit,           {0} }, // quit
-	{ MODKEY|ShiftMask,             XK_r,                    quit,           {1} }, // restart
+	{ MODKEY|ShiftMask|ControlMask, XK_q,                    quit,           {0} }, // quit
+	{ MODKEY|ShiftMask|ControlMask, XK_r,                    quit,           {1} }, // restart
 	{ MODKEY,                       XK_Print,                spawn,          {.v = screenshotcmd } },
-	{ MODKEY|ShiftMask,             XK_Pause,                spawn,          {.v = hibernatecmd } },
+	{ MODKEY|ShiftMask|ControlMask, XK_Pause,                spawn,          {.v = hibernatecmd } },
 	{ MODKEY,                       XK_F1,                   spawn,          {.v = cheatsheetcmd } },
 	{ 0,                            XF86XK_AudioMute,        spawn,          SHCMD("pamixer -t && echo volume >> $HOME/go/src/github.com/thomasheller/godwmbar/godwmbar.pipe" ) },
 	{ 0,                            XF86XK_AudioRaiseVolume, spawn,          SHCMD("pamixer -i 15 && echo volume >> $HOME/go/src/github.com/thomasheller/godwmbar/godwmbar.pipe" ) },
