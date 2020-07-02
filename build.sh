@@ -7,7 +7,7 @@ git branch | grep -Fw tmp && git branch -D tmp
 git checkout -b tmp
 git merge --no-edit config
 git merge --no-edit build
-patch <dwm-scratchpad-6.2.diff
+# patch <dwm-scratchpad-6.2.diff
 # patch <dwm-attachbottom-6.2.diff
 patch <dwm-warp-6.2.diff
 # patch <dwm-zoomswap-6.2.diff
