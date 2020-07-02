@@ -80,8 +80,8 @@ static const char *lockcmd[]       = { "xsecurelock", NULL };
 static const char *cheatsheetcmd[] = { "cheatsheet" };
 static const char *googlecmd[]     = { "google_search.py" };
 
-static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x24", NULL };
+// static const char scratchpadname[] = "scratchpad";
+//static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x24", NULL };
 
 #include <X11/XF86keysym.h>
 #include "movestack.c"
@@ -128,7 +128,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                                    6)
 	TAGKEYS(                        XK_8,                                    7)
 	TAGKEYS(                        XK_9,                                    8)
-	{ MODKEY,                       XK_x,                    togglescratch,  {.v = scratchpadcmd } },
+	// { MODKEY,                       XK_x,                    togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY|ShiftMask|ControlMask, XK_q,                    quit,           {0} }, // quit
 	{ MODKEY|ShiftMask|ControlMask, XK_r,                    quit,           {1} }, // restart
 	{ MODKEY,                       XK_Print,                spawn,          {.v = screenshotcmd } },
