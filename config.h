@@ -105,6 +105,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_p,                    spawn,          {.v = passwordcmd } },
 	{ MODKEY,                       XK_e,                    spawn,          {.v = emojicmd } },
 	{ MODKEY|ShiftMask,             XK_Return,               spawn,          {.v = termcmd } },
+	{ MODKEY|ShiftMask,             XK_t,                    spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,                    togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_b,                    spawn,          {.v = browsercmd } },
 	{ MODKEY,                       XK_j,                    focusstack,     {.i = +1 } },
